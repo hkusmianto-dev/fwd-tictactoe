@@ -8,13 +8,25 @@ try{
 $(document).ready(function () {
     $("#playerOneDesc").text(game.playerOne.toUpperCase() + " won");
     $("#playerTwoDesc").text(game.playerTwo.toUpperCase() + " won");
-    renderBoard(game);
+    renderBoard()
 });
 
-function renderBoard(game) {
+function renderBoard() {
+    let row = parseInt($("#row").val());
+    let col = parseInt($("#col").val());
+
+    if(row !== col){
+        alert("Board size ( row x col ) should be equal number");
+        $("#row").val(game.row);
+        $("#col").val(game.col);
+        return;
+    }
+
+    game.row = row;
+    game.col = col;
+    game.reset();
+
     $("#game").empty();
-    let row = game.row;
-    let col = game.col;
     adjustGrid(col);
 
     let currentRow = 0;
@@ -27,6 +39,8 @@ function renderBoard(game) {
             $("#game").append(div);
         }
     }
+
+    return false;
 }
 
 function adjustGrid(col){

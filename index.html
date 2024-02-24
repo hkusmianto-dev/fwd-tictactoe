@@ -13,7 +13,18 @@
     <div class="span new_span">
         <div class="row">
             <h1 class="span3">Tic Tac Toe</h1>
-            <div class="span3">
+
+            <h1 class="span3"></h1>
+
+            <div class="span3" style="margin-bottom: 20px" >
+                <div class="form-inline"  style="width: 100%">
+                    <input id="row" type="number" class="input-small" placeholder="row" value="3">
+                    <input id="col" type="number" class="input-small" placeholder="col" value="3">
+                </div>
+                <button type="button" class="btn btn-primary" style="margin-top: 5px; width: 100%" onclick="renderBoard()">Render Board</button>
+            </div>
+
+            <div class="span3" style="border-top-style: dashed; padding-top:10px">
                 <div class="input-prepend input-append">
                     <span id="playerOneDesc" class="add-on win_text"></span>
                     <strong id="playerOne" class="win_times add-on">0</strong>
