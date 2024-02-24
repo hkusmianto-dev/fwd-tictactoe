@@ -1,5 +1,5 @@
 try{
-    var game = new Game(4, 4);
+    var game = new Game(3, 3);
 }catch (e){
     alert(e)
 }
