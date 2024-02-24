@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe game</title>
+    <link rel='stylesheet prefetch' href='https://getbootstrap.com/2.3.2/assets/css/bootstrap.css'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="tic-tac-toe">
+    <div class="span new_span">
+        <div class="row">
+            <h1 class="span3">Tic Tac Toe</h1>
+            <div class="span3">
+                <div class="input-prepend input-append">
+                    <span id="playerOneDesc" class="add-on win_text"></span>
+                    <strong id="playerOne" class="win_times add-on">0</strong>
+                    <span class="add-on">time(s)</span>
+                </div>
+                <div class="input-prepend input-append">
+                    <span id="playerTwoDesc" class="add-on win_text"></span>
+                    <strong id="playerTwo" class="win_times add-on">0</strong>
+                    <span class="add-on">time(s)</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="board-container">
+    <ul id="game" class="board"></ul>
+    <div>
+        <div class="clr">&nbsp;</div>
+        <div class="row"><a href="#" id="reset" onclick="reset()" class="btn-success btn span3">Restart</a></div>
+    </div>
+
+</div>
+
+<script src='https://code.jquery.com/jquery-1.7.2.min.js'></script>
+<script src="js/game.js"></script>
+<script src="js/index.js"></script>
+</body>
+
+</html>
